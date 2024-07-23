@@ -1,0 +1,186 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Oswald', sans-serif;
+
+    /*font-heigth pode ser colocado como "global", bem como o "color"*/
+}
+
+.container {
+    height: 100vh;
+    width: 100vw; 
+
+}
+
+.container-left {
+    display: inline-block;
+    width: 60%;
+    padding-left: 136px;
+    margin-top: 10%;
+}
+
+
+
+.container-rigth {
+    display: inline-block;
+    background-color: rgba(30, 29, 53);
+    height: 100vh;
+    width: 40%;
+    position: absolute;
+    
+}
+
+img {
+    position: relative;
+    top: 5%;
+    right: 45px;
+    width: 80%;
+    padding: 20px;
+}
+
+h1 {
+    font-weight: 400;  
+    font-size: 70px;
+    line-height: 80px;
+    width: 500px;
+    color: rgb(30, 29, 53);
+}
+
+.container-left p {
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 48px;
+    opacity: 0.8;
+    margin: 15px 0;
+    width: 540px;
+    color: rgb(30, 29, 53);
+
+}
+
+button {
+    width: 269px;
+    height: 62px;
+    background: rgb(30, 29, 53);
+    box-shadow: 0px 10px 24px rgba(24, 25, 53, 0.99);
+    border: none;
+    border-radius: 30px; /*deixa a borda arredondada*/
+    font-size: 24px;
+    line-height: 36px;
+    text-align: center;
+    color: #FFF;
+    cursor: pointer;
+}
+
+/* Novo estilo para o parágrafo */
+.about-text {
+    font-weight: 400;
+    font-size: 20px; /* Altere para o tamanho de fonte desejado */
+    line-height: 1.5; /* Ajuste a altura da linha conforme necessário */
+    opacity: 0.8;
+    margin: 30px 0;
+    color: #FFFFFF; /* Defina a cor do texto */
+    padding: 30px;
+    border-radius: 8px;
+}
+
+button:hover{ /* para quando passar o mouse por cima ele ficar mais opaco*/
+    opacity: 0.8;
+}
+
+button:active {
+    opacity: .5;
+}
+
+/*LINKS*/
+
+a {
+    font-size: 28px;
+    line-height: 41px;
+    margin-right: 41px;
+    cursor: pointer;
+    color: white;
+    text-decoration: none;
+}
+
+/*para selecionar apenas um dos links podemos criar uma classe só o que queremos em específico no HTML
+ou podemos utilizar assim:*/
+
+
+a:hover {
+    opacity: 0.4;
+}
+
+a:active {
+    opacity: 0.8;
+
+}
+
+header {
+    margin: 24px 0 0 57px;
+    text-align: center;
+
+}
+
+@media screen and (max-width: 1080px) {
+    .container-left {
+        width: 100%;
+        height: 50%;
+        padding: 0;
+        margin: 0;
+    }
+
+    .container-rigth {
+        display: block;
+        height: auto;
+        width: 100%;
+        position: static;
+    }
+
+    img  {
+        position: static;
+
+    }
+
+    header {
+        display: none;
+    }
+
+    h1 {
+        font-size: 36px;
+        line-height: 52px;
+        width: auto;
+        margin: 58px 50px 0 50px;
+        text-align: center;
+        color:#100641 ;
+    }
+
+    p {
+        margin: 15px 40px;
+        width: auto;
+        text-align: center;
+        font-size: 14px;
+        line-height: 24px;
+    }
+
+/*Para botões, não usaremos "text-align", ao invés disso utilizaremos "margin:auto" tanto na esquerda quanto na direita,
+para isso ocorrer de maneira correta o elemento tem que ser "display:block" */
+
+        button {
+            margin: 0 auto;
+            display: block;
+        }
+
+}
+
+
+
+/*responsividade
+
+utiliza-se "@media screen" -> pode ser utilizado tanto em baixo de cada parâmetro, quanto ao final de tudo (basta
+destacar quais parâmetros voc~e deseja alterar)
+
+**Lembrando que o mesmo segue o "Padrão Cascata"
+
+
+*/
